@@ -19,8 +19,8 @@ do
     peersNum=$(docker exec -i bty chain33-cli net peer_info | grep addr -c)
     if [ "$peersNum" -gt 1 ]; then
     	echo "peersNum: $peersNum"
-        break
         echo "111"
+        break
     fi
     sleep 1s
 done
