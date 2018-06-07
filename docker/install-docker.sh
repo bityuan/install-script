@@ -1,5 +1,4 @@
 #!/bin/bash
-set -x
 
 # install bityuan node
 docker pull bityuan/node:latest
