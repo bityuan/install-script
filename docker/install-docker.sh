@@ -22,7 +22,6 @@ do
         break
         echo "111"
     fi
-    echo "222"
     sleep 1s
 done
 echo "333"
