@@ -1,5 +1,5 @@
 #!/bin/bash
-
+set -x
 # install bityuan node
 docker pull bityuan/node:latest
 docker run -d --name bty -p 13802:13802 -v /data:/data --restart always bityuan/node:latest
