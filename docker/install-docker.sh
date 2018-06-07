@@ -20,9 +20,12 @@ do
     if [ "$peersNum" -gt 1 ]; then
     	echo "peersNum: $peersNum"
         break
+        echo "111"
     fi
+    echo "222"
     sleep 1s
 done
+echo "333"
 
 docker exec -i bty chain33-cli net info
 
