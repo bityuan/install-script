@@ -1,5 +1,5 @@
 #!/bin/bash
-set -x
+
 # install bityuan node
 docker pull bityuan/node:latest
 docker run -d --name bty -p 13802:13802 -v /data:/data --restart always bityuan/node:latest
@@ -19,13 +19,10 @@ do
     peersNum=$(docker exec -i bty chain33-cli net peer_info | grep addr -c)
     if [ "$peersNum" -gt 1 ]; then
     	echo "peersNum: $peersNum"
-        echo "$i"
-        echo "111"
         break
     fi
     sleep 1s
 done
-echo "333"
 
 docker exec -i bty chain33-cli net info
 
