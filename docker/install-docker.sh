@@ -27,9 +27,9 @@ done
 chain33-cli net info
 
 seed=$(chain33-cli seed generate -l 0 | grep seed | cut -d '"' -f 4)
-seed=\"$seed\"
 echo "seed:$seed"
-chain33-cli seed save -p 123456 -s $seed
+#chain33-cli seed save -p 123456 -s "$seed"
+docker exec -i bty chain33-cli seed save -p 123456 -s "$seed"
 chain33-cli wallet unlock -p 123456 -s wallet -t 0
 
 for i in $(seq 30)
