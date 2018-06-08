@@ -43,7 +43,6 @@ do
     fi
     sleep 1s
 done
-echo "$i"
 
 #echo $node
 priv=$(docker exec -i bty chain33-cli  account dump_key -a "$node" | grep replystr | cut -d '"' -f 4)
